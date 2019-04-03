@@ -18,6 +18,7 @@ export default class Graph extends Component {
       <div className="graph-container">
         <div className="graph-main">
           <Goal task="task-1" subtask="subtask-1" />
+          <Goal task="task-2" subtask="subtask-2" />
         </div>
       </div>
     );

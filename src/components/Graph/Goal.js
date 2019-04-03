@@ -17,12 +17,21 @@ export default class Goal extends Component {
       borderWidth: 3
     };
     return (
-      <div className="goal-container">
+      <div
+        className="goal-container"
+        style={{
+          borderColor: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+            Math.random() * 256
+          )}, ${Math.floor(Math.random() * 256)})`,
+          borderStyle: "solid",
+          borderWidth: "2px"
+        }}
+      >
         <Subtask className={`${this.props.subtask}`} />
         <Task className={`${this.props.task}`}>A</Task>
         <SteppedLineTo
-          from="task-1"
-          to="subtask-1"
+          from={`${this.props.task}`}
+          to={`${this.props.subtask}`}
           {...style}
           // orientation="h"
           // from="stepped-A"
