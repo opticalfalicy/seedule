@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Task from "./Task";
+import Subtask from "./Subtask";
+import Goal from "./Goal";
 import LineTo, { SteppedLineTo, Line } from "react-lineto";
 
 import "./Graph.sass";
@@ -15,18 +17,7 @@ export default class Graph extends Component {
     return (
       <div className="graph-container">
         <div className="graph-main">
-          <Task className="line-A">A</Task>
-          <Task className="line-B">B</Task>
-          <SteppedLineTo
-            from="line-A"
-            to="line-B"
-            {...style}
-            // orientation="h"
-            // from="stepped-A"
-            // to="stepped-B"
-            fromAnchor="left"
-            toAnchor="right"
-          />
+          <Goal task="task-1" subtask="subtask-1" />
         </div>
       </div>
     );
