@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Subtask from "./Subtask";
 import "./Task.sass";
 
 export default class Task extends Component {
